@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sakif Hussain Homework 2</title>
+    <style>
+      body {
+        font-family: Verdana, sans-serif;
+      }
+      p {
+        color: red;
+        background-color: rgba(0,255,0,.3);
+        font-size: 300%;
+        position: absolute;
+        margin-left: 60%;
+        margin-top: 30%;
+        display: block
+      }
+      .mySlides {
+        display: block;
+      }
+      img {
+        vertical-align: middle;
+        position: absolute;
+      }
+      .essay {
+        display: block;
+      }
+      .slideshow-container {
+        width: 100%;
+        margin: auto;
+      }
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      @keyframes fade {
+        from {opacity: .2}
+        to {opacity: 1}
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="images/img00.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="images/img01.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="images/img02.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="images/img03.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="images/img04.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="images/img05.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="images/img06.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="images/img07.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="images/img08.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="images/img09.jpg" style="width:100%">
+      </div>
+    </div>
+
+      <p class="essay">
+        All different kinds of food.<br/>
+        Tons of variety you will see everyday.
+      </p>
+
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          for (i = 0; i < slides.length; i++) {
+             slides[i].style.display = "none";
+          }
+          slideIndex++;
+
+          if (slideIndex > slides.length) {slideIndex = 1}
+          slides[slideIndex-1].style.display = "block";
+          setTimeout(showSlides, 3000);
+      }
+    </script>
+  </body>
+</html>
